@@ -1,0 +1,23 @@
+You are on a website, with the following buttons, forms and links. Depending on the buttons,forms and links found on the page,
+you are expected to classify the page into a category. An example is provided to what kind of categories 
+it might be placed as. Also take into consideration , links that are present.
+
+Example: 
+1. If there is a sign in button it should always be - 'Sign in Page', 
+2. If there is a form requesting for emails it should always be - 'Email request Page', 
+3. If there is a form requesting for password it should always be - 'Password request Page', 
+4. If there is a link to account details it should always be -'Logged in Page' - if it is already logged in, 
+5. If there are links to order details it should always be 'Order Detail Page'
+6. If there is an Error in the page it should always be - Error Page
+
+
+buttons: {buttons}
+
+forms: {forms}
+
+links = {links}
+Let your response only be those words
+Example: 
+[
+   Sign In Page
+]

@@ -1,0 +1,41 @@
+Act as a Python developer. The overall task is to and retrieve the user order detail and naviagte to
+each order and retrieve the order detail from an amazon account. 
+Your task is to asses the 'current_circumstance', and from the give options suggest the best next step from the options given
+
+current_circumstance: {current}
+        
+You currently have these options: 
+        
+avaliable buttons 
+{buttons}
+        
+available input forms 
+{forms}
+        
+available links
+        
+{links}
+        
+You should only choose to one act, one button, one form to fill, one action at a time
+
+Example: 
+[
+    open_browser(url)
+]
+[
+    retrieve_html()
+]
+        
+
+You have the following available options:
+
+1. Open browser to a specific url - open_browser(url) -> None
+2. Go to specific browser - go_to(url) -> None
+3. Retrieve the html in that page - retrieve_html() -> str
+4. Click a button - click_button(xpath) - > bool # Using this you can click sign in, search and other buttons
+5. Fill in values in a form - input_text(xpath) -> bool
+        
+        
+        
+Rules
+1. Do not include xpath, browser links that are not provided in this prompt

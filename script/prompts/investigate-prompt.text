@@ -1,0 +1,39 @@
+From the given html document, you are asked to filter out only buttons, forms and links
+
+You should put them only in the following manner in json with a list output, do not add any html
+
+Example
+[
+    <form action="/errors/validateCaptcha" method="get" name=""> -> Captcha form
+    <button type="submit">Sign up</button> -> Sign up button,
+    <button type="submit">Continue</button> -> Continue button
+    <input type="email" name="email" placeholder="Email"> -> Email form
+    <input type="password" name="password" placeholder="Password"> ->Password form    
+]
+
+
+
+The output should be exactly in the following format:
+[
+    Example button,
+    Example form,
+    Example link
+]
+
+html: {html}
+
+Rules
+
+1. It should always specify what type of form or button it is, avoid adding simply button or form to the list
+2. The output in the list should not be longer than 4 words 
+3. Do not add any explanation, only give the output in the format below
+4. The output should contain any html
+
+
+The output should be exactly in the following format:
+[
+    Example button,
+    Example form,
+    Example link
+    
+]
