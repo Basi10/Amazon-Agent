@@ -3,9 +3,11 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token
+from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
+CORS(app)
 app.config['JWT_SECRET_KEY'] = os.environ.get('SECRET_KEY') or 'this is a secret'
 jwt = JWTManager(app)
 
