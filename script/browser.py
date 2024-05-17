@@ -181,32 +181,6 @@ class BrowserAction:
             self.logger.exception(e)
             raise Exception(f"Error occurred while interacting with element: {e}")
 
-    def retrieve_work_item(self, variable: str) -> str:
-        """
-        Retrieve the work item from the user.
-
-        Args:
-            variable (str): Variable name to retrieve.
-
-        Returns:
-            str: Retrieved work item.
-
-        Raises:
-            KeyError: If the specified variable is not found in the work item variables.
-            Exception: If any other unexpected error occurs during retrieval.
-        """
-        try:
-            self.library.get_input_work_item()
-            variables = self.library.get_work_item_variables()
-            item = variables[variable]
-            self.logger.info("Successfully retrieved work item")
-            return item
-        except KeyError:
-            self.logger.exception(f"Variable '{variable}' not found in work item variables")
-            raise Exception(f"Variable '{variable}' not found in work item variables")
-        except Exception as e:
-            self.logger.exception(f"Error retrieving work item: {e}")
-            raise Exception(f"Error retrieving work item: {e}")
 
     def close_browser(self):
         """
