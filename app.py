@@ -85,7 +85,7 @@ def login():
 
 @app.route("/users/", methods=["GET"])
 @jwt_required()  # Protected route
-def get_users():
+def order_detail():
     return jsonify({
         "message": "Successfully retrieved users",
         "data": users
